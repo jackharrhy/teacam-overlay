@@ -16,6 +16,9 @@ var functions = {
 	},
 	footerMessage: function (message) {
 		footerMessageElem.innerHTML = message;
+	},
+	timer: function (setTo) {
+		timer = setTo;
 	}
 };
 
@@ -42,10 +45,10 @@ function changeTeaAmount(percentage) {
 
 var amountOfTea = 70;
 
-var activeFor = -1;
+var timer = 0;
 
 function loop() {
-	activeFor++;
+	timer--;
 
 	setTimeout(loop, 1000);
 }
@@ -55,7 +58,12 @@ function render() {
 
 	var date = new Date();
 	timeElem.innerHTML = date.toLocaleTimeString();
-	activeForElem.innerHTML = "Streaming for: " + activeFor.toString() + " seconds.";
+
+	if (timer >= 0) {
+		timerElem.innerHTML = timer;
+	} else {
+		timerElem.innerHTML = '';
+	}
 
 	requestAnimationFrame(render);
 }
@@ -63,8 +71,8 @@ function render() {
 document.addEventListener("DOMContentLoaded", function (event) {
 	timeElem = document.getElementById('time');
 	teaElem = document.getElementById('tea');
-	activeForElem = document.getElementById('activeFor');
 	footerMessageElem = document.getElementById('footerMessage');
+	timerElem = document.getElementById('timer');
 
 	loop();
 	render();

@@ -1,26 +1,26 @@
-@import 'https://fonts.googleapis.com/css?family=Mogra';
 body {
   margin: 0;
   background-color: #111;
-  font-family: 'Mogra', cursive;
-  color: rgba(200, 200, 200, 0.5);
+  font-family: helvetica;
+  color: rgba(200, 200, 200, 0.75);
   text-shadow: 0 0 5px black;
 }
 #container {
   position: absolute;
   top: 0;
-  width: 800px;
-  height: 600px;
+  width: 1280px;
+  height: 720px;
   border-bottom: 2px solid red;
   border-right: 2px solid red;
   text-align: center;
 }
 h1 {
-  margin: 0.5em 0 0 0;
+  margin: 0.2em 0 0 0;
+  font-size: 4em;
 }
 p {
-  margin: 0.25em 0 0 0;
-  font-size: 1.75em;
+  margin: 0.1em 0 0 0;
+  font-size: 2.75em;
 }
 #teaMeter {
   position: absolute;

@@ -29,3 +29,4 @@ newButton('teaUpOne');
 newButton('teaDownOne');
 newButton('teaDownFive');
 newInput('footerMessage');
+newInput('timer');
